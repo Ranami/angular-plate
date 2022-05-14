@@ -1,0 +1,15 @@
+<mat-grid-list cols="5" rowHeight="1:1.7">
+  <mat-grid-tile *ngFor="let character of characters; let i = index">
+    <app-character-box [character]="character"></app-character-box>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-paginator
+  class="paginator"
+  showFirstLastButtons
+  [length]="allPages"
+  [pageSize]="20"
+  aria-label="Select page"
+  (page)="handlePaginate($event)"
+  (window:resize)="handleSize($event)"
+>
+</mat-paginator>

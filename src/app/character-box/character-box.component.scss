@@ -1,0 +1,30 @@
+.character-card {
+  transition: 0.2s;
+  width: 300px;
+  height: 550px;
+  color: white;
+  &:hover {
+    transform: scale(1.1);
+  }
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: #545d63;
+}
+
+img.character-img {
+  height: 410px;
+  object-fit: cover;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.708);
+  font-size: 18px;
+}
+
+.content p {
+    font-size: 20px;
+}

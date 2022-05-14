@@ -1,0 +1,23 @@
+<mat-card class="character-card">
+  <mat-card-header>
+    <mat-card-title class="title">{{ character?.name }}</mat-card-title>
+    <mat-card-subtitle class="subtitle">{{
+      character?.nickname
+    }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="{{ character?.img }}"
+    alt="{{ character?.name }}"
+    class="character-img"
+  />
+  <mat-card-content class="content">
+    <p>
+      Status:
+      <span [ngStyle]="{ color: getCharacterColor(character!) }">{{
+        character?.status
+      }}</span>
+    </p>
+    <p>Birthday: {{ character?.birthday?.split("-")?.join(".") }}</p>
+  </mat-card-content>
+</mat-card>
